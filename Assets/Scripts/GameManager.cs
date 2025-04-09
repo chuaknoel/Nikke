@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,6 +38,11 @@ public class GameManager : MonoBehaviour
     private bool isChecking = false;  // 현재 카드 쌍 체크 중인지 여부
     private int matchesFound = 0;     // 찾은 매치 수
 
+
+    private void Awake()
+    {
+
+    }
     void Start()
     {
         // 싱글톤 설정
@@ -44,6 +50,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+
+        UpdateBestRecord(); //시작할때 최고점수 보이기
 
         // 게임 상태 초기화
         Time.timeScale = 1f;          // 게임 시간 정상 흐름 설정
@@ -58,6 +66,8 @@ public class GameManager : MonoBehaviour
         {
             clearPanel.SetActive(false);
         }
+
+
     }
 
     void Update()
@@ -74,6 +84,8 @@ public class GameManager : MonoBehaviour
         {
             GameOver(); // 시간 초과 시 게임 오버
         }
+
+      
     }
 
     // 현재 카드 체크 중인지 확인하는 메소드
@@ -144,12 +156,12 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
         if (gameOverPanel != null)
         {
-            ScoreUI();     // 시간 점수 업데이트
-            CardnumUI();   // 카드 매치 점수 업데이트
+            UpdateBestRecord();
             gameOverPanel.SetActive(true);
-            Time.timeScale = 0.0f; // 게임 일시 정지
+            Time.timeScale = 0.0f;
         }
     }
+
 
     // 게임 클리어(승리) 상태 처리
     private void Clear()
@@ -157,70 +169,56 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
         if (clearPanel != null)
         {
-            // 스코어 업데이트 및 계산
-            ScoreUI();     // 시간 점수 업데이트
-            CardnumUI();   // 카드 매치 점수 업데이트
+            UpdateBestRecord();
             clearPanel.SetActive(true);
-            Time.timeScale = 0.0f; // 게임 일시 정지
+            Time.timeScale = 0.0f;
         }
     }
 
-    // 카드 매치 UI 업데이트 및 최고 점수 저장
-    public void CardnumUI()
-    {
-        if (PlayerPrefs.HasKey(cardsKey))
-        {
-            minCardScore = PlayerPrefs.GetInt(cardsKey, cardScore);
-            if (minCardScore < cardScore)
-            {
-                // 새로운 최고 기록 달성
-                PlayerPrefs.SetInt(cardsKey, cardScore);
-                cardNumText.text = Cards.ToString();
-            }
-            else
-            {
-                // 기존 최고 기록 유지
-                cardNumText.text = minCardScore.ToString();
-            }
-        }
-        else
-        {
-            // 첫 플레이 시 기록 저장
-            PlayerPrefs.SetInt(timeKey, Cards);
-            cardNumText.text = Cards.ToString();
-        }
-    }
 
-    // 시간 점수 UI 업데이트 및 최고 점수 저장
-    public void ScoreUI()
-    {
-        if (PlayerPrefs.HasKey(timeKey))
-        {
-            bestScore = PlayerPrefs.GetFloat(timeKey, time);
 
-            if (bestScore > time)
-            {
-                // 새로운 최고 기록(더 빠른 시간) 달성
-                PlayerPrefs.SetFloat(timeKey, time);
-                bestScoreText.text = time.ToString("N2");
-            }
-            else
-            {
-                // 기존 최고 기록 유지
-                bestScoreText.text = bestScore.ToString("N2");
-            }
-        }
-        else
+    public void UpdateBestRecord()
+    {
+       
+
+        int savedCardScore = PlayerPrefs.GetInt(cardsKey, 0);
+        float savedTime = PlayerPrefs.GetFloat(timeKey, float.MaxValue);
+
+        bool isBetterRecord = false;
+
+        
+        if (cardScore > savedCardScore)// 카드 수가 더 많으면 저장
         {
-            // 첫 플레이 시 기록 저장
+            PlayerPrefs.SetInt(cardsKey, cardScore);
             PlayerPrefs.SetFloat(timeKey, time);
-            bestScoreText.text = time.ToString("N2");
+            isBetterRecord = true;
         }
+      
+        else if (cardScore == savedCardScore && time > savedTime)  // 카드 수가 같고 시간이 더 짧으면 저장
+        {
+            PlayerPrefs.SetFloat(timeKey, time);
+            isBetterRecord = true;
+        }
+       
+
+        if (isBetterRecord) //  (저장 안 됨) 카드 수가 작거나 시간이 더 느리면 패스 왜 안돼에에
+        {
+            PlayerPrefs.Save();
+          
+        }
+        
+        
+
+        // UI 최신화
+        int bestCards = PlayerPrefs.GetInt(cardsKey, 0);
+        float bestTime = PlayerPrefs.GetFloat(timeKey, 0f);
+
+        cardNumText.text = bestCards.ToString();
+        bestScoreText.text = bestTime.ToString("N2");
+
+      
     }
 
-    // 게임 재시작 메소드
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+
+   
 }
