@@ -1,4 +1,0 @@
-repository "Nikke_Card2/Nikke_Card2@14568665306360@cloud"
-  path "/"
-    br "/main"
-    co "/main"
