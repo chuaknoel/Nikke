@@ -189,24 +189,46 @@ public class GameManager : MonoBehaviour
         
         if (cardScore > savedCardScore)// 카드 수가 더 많으면 저장
         {
-            PlayerPrefs.SetInt(cardsKey, cardScore);
+            minCardScore = PlayerPrefs.GetInt(cardsKey, cardScore);
+            if (minCardScore < cardScore)
+            {
+                // 새로운 최고 기록 달성
+                PlayerPrefs.SetInt(cardsKey, cardScore);
             PlayerPrefs.SetFloat(timeKey, time);
             isBetterRecord = true;
-        }
+            }
       
         else if (cardScore == savedCardScore && time > savedTime)  // 카드 수가 같고 시간이 더 짧으면 저장
-        {
+            {
             PlayerPrefs.SetFloat(timeKey, time);
             isBetterRecord = true;
-        }
-       
+    }
+
 
         if (isBetterRecord) //  (저장 안 됨) 카드 수가 작거나 시간이 더 느리면 패스 왜 안돼에에
         {
             PlayerPrefs.Save();
-          
+
+            if (bestScore > time)
+            {
+                // 새로운 최고 기록(더 빠른 시간) 달성
+                PlayerPrefs.SetFloat(timeKey, time);
+                bestScoreText.text = time.ToString("N2");
+            }
+            else
+            {
+                // 기존 최고 기록 유지
+                bestScoreText.text = bestScore.ToString("N2");
+            }
         }
-        
+        else
+        {
+            // 첫 플레이 시 기록 저장
+            PlayerPrefs.SetFloat(timeKey, time);
+            bestScoreText.text = time.ToString("N2");
+        }
+    }
+
         
 
         // UI 최신화

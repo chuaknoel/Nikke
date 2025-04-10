@@ -8,6 +8,10 @@ PhysicsManager:
   m_DefaultMaterial: {fileID: 0}
   m_BounceThreshold: 2
   m_DefaultMaxDepenetrationVelocity: 10
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+  m_DefaultMaxDepenetrationVelocity: 10
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   m_SleepThreshold: 0.005
   m_DefaultContactOffset: 0.01
   m_DefaultSolverIterations: 6

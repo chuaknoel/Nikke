@@ -4,7 +4,15 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
+<<<<<<< HEAD
+<<<<<<< HEAD
+  productGUID: 19872604df4569b42ab8d3cbf544d729
+=======
   productGUID: 7f8cc345c4627254e9260cd1e4b40ec2
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+  productGUID: 7f8cc345c4627254e9260cd1e4b40ec2
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +21,15 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
+<<<<<<< HEAD
+<<<<<<< HEAD
+  productName: Nikke_Card2
+=======
   productName: Nikke_card
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+  productName: Nikke_card
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -163,7 +179,15 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
+<<<<<<< HEAD
+<<<<<<< HEAD
+    Standalone: com.DefaultCompany.2D-URP
+=======
     Standalone: com.DefaultCompany.2D-Project
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+    Standalone: com.DefaultCompany.2D-Project
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -250,8 +274,18 @@ PlayerSettings:
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+  clonedFromGUID: c19f32bac17ee4170b3bf8a6a0333fb9
+  templatePackageId: com.unity.template.universal-2d@5.1.0
+=======
   clonedFromGUID: 10ad67313f4034357812315f3c407484
   templatePackageId: com.unity.template.2d@11.0.0
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+  clonedFromGUID: 10ad67313f4034357812315f3c407484
+  templatePackageId: com.unity.template.2d@11.0.0
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
@@ -479,6 +513,14 @@ PlayerSettings:
       m_SubKind: 
   m_BuildTargetBatching: []
   m_BuildTargetShaderSettings: []
+<<<<<<< HEAD
+<<<<<<< HEAD
+  m_BuildTargetGraphicsJobs: []
+  m_BuildTargetGraphicsJobMode: []
+  m_BuildTargetGraphicsAPIs: []
+=======
+=======
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   m_BuildTargetGraphicsJobs:
   - m_BuildTarget: MacStandaloneSupport
     m_GraphicsJobs: 0
@@ -514,6 +556,10 @@ PlayerSettings:
   - m_BuildTarget: iOSSupport
     m_APIs: 10000000
     m_Automatic: 1
+<<<<<<< HEAD
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   m_BuildTargetVRSettings: []
   m_DefaultShaderChunkSizeInMB: 16
   m_DefaultShaderChunkCount: 0
@@ -529,10 +575,20 @@ PlayerSettings:
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding: []
+<<<<<<< HEAD
+<<<<<<< HEAD
+  m_BuildTargetDefaultTextureCompressionFormat: []
+=======
+=======
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   m_BuildTargetDefaultTextureCompressionFormat:
   - serializedVersion: 3
     m_BuildTarget: Android
     m_Formats: 03000000
+<<<<<<< HEAD
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -792,12 +848,26 @@ PlayerSettings:
   webGLMemoryLinearGrowthStep: 16
   webGLMemoryGeometricGrowthStep: 0.2
   webGLMemoryGeometricGrowthCap: 96
+<<<<<<< HEAD
+<<<<<<< HEAD
+  webGLEnableWebGPU: 0
+=======
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   webGLPowerPreference: 2
   webGLWebAssemblyTable: 0
   webGLWebAssemblyBigInt: 0
   webGLCloseOnQuit: 0
   webWasm2023: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   webEnableSubmoduleStrippingCompatibility: 0
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+  webEnableSubmoduleStrippingCompatibility: 0
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   scriptingDefineSymbols: {}
   additionalCompilerArguments: {}
   platformArchitecture: {}
@@ -819,14 +889,30 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
+<<<<<<< HEAD
+<<<<<<< HEAD
+  metroPackageName: Nikke_Card2
+=======
   metroPackageName: Nikke_card
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+  metroPackageName: Nikke_card
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
+<<<<<<< HEAD
+<<<<<<< HEAD
+  metroApplicationDescription: Nikke_Card2
+=======
   metroApplicationDescription: Nikke_card
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+  metroApplicationDescription: Nikke_card
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -888,13 +974,33 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   hmiPlayerDataPath: 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  hmiForceSRGBBlit: 1
+=======
   hmiForceSRGBBlit: 0
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+  hmiForceSRGBBlit: 0
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   embeddedLinuxEnableGamepadInput: 0
   hmiCpuConfiguration: 
   hmiLogStartupTiming: 0
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
+<<<<<<< HEAD
+<<<<<<< HEAD
+  activeInputHandler: 2
+  windowsGamepadBackendHint: 0
+  cloudProjectId: b87cdd04-d1a9-4da3-bc64-9d725134e0bc
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  projectName: Nikke_Card2
+  organizationId: dnap4204
+=======
+=======
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
   cloudProjectId: 0383fed8-a09e-4e8d-a043-a89a3bcda9fb
@@ -902,6 +1008,10 @@ PlayerSettings:
   qualitySettingsNames: []
   projectName: Nikke_card
   organizationId: wkd282812
+<<<<<<< HEAD
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
@@ -910,4 +1020,11 @@ PlayerSettings:
   insecureHttpOption: 0
   androidVulkanDenyFilterList: []
   androidVulkanAllowFilterList: []
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   androidVulkanDeviceFilterListAsset: {fileID: 0}
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
+=======
+  androidVulkanDeviceFilterListAsset: {fileID: 0}
+>>>>>>> dcbaf1d8927ba4ead17173f6c620eb62a77b13a8
