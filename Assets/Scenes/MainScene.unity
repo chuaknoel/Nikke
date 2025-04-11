@@ -1263,12 +1263,12 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1963798899}
   bestScoreText: {fileID: 1028716447}
   cardNumText: {fileID: 290413218}
-  time: 10
-  totalMatches: 4
+  time: 55
+  totalMatches: 24
   timeKey: BestTime
   cardsKey: Cards
   bestScore: 0
-  Cards: 4
+  Cards: 24
 --- !u!1 &1360754458
 GameObject:
   m_ObjectHideFlags: 0
